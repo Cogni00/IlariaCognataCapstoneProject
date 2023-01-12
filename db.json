@@ -1,0 +1,168 @@
+{
+  "users": [
+    {
+      "email": "ilaria@cognata.com",
+      "password": "$2a$10$fAda54S1uMwg0stRlg8Yi.hXvusp2HBPZkWNOzHuc3v0xs8uHyZ/.",
+      "nome": "Ilaria",
+      "cognome": "Cognata",
+      "impiego": "Frontend Developer",
+      "citta": "roma",
+      "avatar": "../../../assets/avatar/avatar6.svg",
+      "selectedSkills": [
+        " Html5",
+        " CSS",
+        " Bootstrap",
+        " Javascript",
+        " Nodejs",
+        " Typescript",
+        " Angular"
+      ],
+      "recezioneMess": false,
+      "id": 6
+    },
+    {
+      "email": "lorenzo@decarolis.com",
+      "password": "$2a$10$KaXxxtb33KAnIVs2aL663un6I1eAjl5656BCpJ3bEIZDNU5/sJzxG",
+      "nome": "Lorenzo",
+      "cognome": "De carolis",
+      "impiego": "Fullstack Developer",
+      "citta": "Roma",
+      "avatar": "../../../assets/avatar/avatar9.svg",
+      "selectedSkills": [
+        " Html5",
+        " CSS",
+        " Bootstrap",
+        " Javascript",
+        " Typescript",
+        " Angular",
+        " Java"
+      ],
+      "recezioneMess": false,
+      "id": 7
+    },
+    {
+      "email": "gennaro@notaro.com",
+      "password": "$2a$10$MZMbJunmGzjLDFZbVlGIFuwtAOB0.SF1l8TxxDJN3Tfp/LUDbxR2m",
+      "nome": "Gennaro",
+      "cognome": "Notaro",
+      "impiego": "Backend Developer",
+      "citta": "Milano",
+      "avatar": "../../../assets/avatar/avatar7.svg",
+      "selectedSkills": [
+        " Java",
+        " Php",
+        " C++",
+        " MySQL"
+      ],
+      "recezioneMess": false,
+      "id": 8
+    },
+    {
+      "email": "david@gualberto.com",
+      "password": "$2a$10$0YEA4uRQE3Mm9i4YkCu7sOSOajFFmc3njX57UEeLf5QuZY6vICG6S",
+      "nome": "David",
+      "cognome": "Gualberto",
+      "impiego": "Fullstack Developer",
+      "citta": "roma",
+      "avatar": "../../../assets/avatar/avatar8.svg",
+      "selectedSkills": [
+        " Html5",
+        " CSS",
+        " Bootstrap",
+        " Javascript",
+        " Nodejs",
+        " Php",
+        " Java"
+      ],
+      "recezioneMess": false,
+      "id": 9
+    },
+    {
+      "email": "brigitte@budani.com",
+      "password": "$2a$10$glHjnbEBVkXpw3oRQUSr0.HJZVwPQDE28SXpNI6V0uVcsEECfU5oG",
+      "nome": "Brigitte",
+      "cognome": "Budani",
+      "impiego": "Backend Developer",
+      "citta": "roma",
+      "avatar": "../../../assets/avatar/avatar 1.svg",
+      "selectedSkills": [
+        " Java",
+        " Php",
+        " MySQL"
+      ],
+      "recezioneMess": false,
+      "id": 10
+    },
+    {
+      "email": "enrica@mazzuca.com",
+      "password": "$2a$10$aa3YWyoEeZXFTqQyKa2.Q.FzYKIKbqtkwdHdUArqnE8gw5430j6Qi",
+      "nome": "Enrica",
+      "cognome": "Mazzuca",
+      "impiego": "Backend Developer",
+      "citta": "torino",
+      "avatar": "../../../assets/avatar/avatar3.svg",
+      "selectedSkills": [
+        " Java",
+        " Php",
+        " C++",
+        " Php",
+        " MySQL"
+      ],
+      "recezioneMess": false,
+      "id": 11
+    },
+    {
+      "email": "simone@lungaroni.com",
+      "password": "$2a$10$/p1uHKOqIoJUX9JNBC6l0uQIqU.0/8PCzIFkwojgGZ1AXNkzqP0ye",
+      "nome": "Simone",
+      "cognome": "Lungaroni",
+      "impiego": "Fullstack Developer",
+      "citta": "roma",
+      "avatar": "../../../assets/avatar/avatar10.svg",
+      "selectedSkills": [
+        " Html5",
+        " CSS",
+        " Bootstrap",
+        " Javascript",
+        " Angular",
+        " Typescript",
+        " React",
+        " Java"
+      ],
+      "recezioneMess": false,
+      "id": 12
+    }
+  ],
+  "avatars": [
+    {
+      "avatar": "../assets/avatar/avatar1.svg"
+    },
+    {
+      "avatar": "../../../assets/avatar/avatar2.svg"
+    },
+    {
+      "avatar": "../../../assets/avatar/avatar3.svg"
+    },
+    {
+      "avatar": "../../../assets/avatar/avatar4.svg"
+    },
+    {
+      "avatar": "../../../assets/avatar/avatar5.svg"
+    },
+    {
+      "avatar": "../../../assets/avatar/avatar6.svg"
+    },
+    {
+      "avatar": "../../../assets/avatar/avatar7.svg"
+    },
+    {
+      "avatar": "../../../assets/avatar/avatar8.svg"
+    },
+    {
+      "avatar": "../../../assets/avatar/avatar9.svg"
+    },
+    {
+      "avatar": "../../../assets/avatar/avatar10.svg"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card-header">
+    <img src="{{avatar}}" style=" width: 50px;" class="card-img-top img-fluid"
+  alt="" />
+    {{nome}} {{cognome}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <p class="card-text">{{p.testo}}</p>
+    <button type="button" class="btn btn-outline-info" (click)=" isFav ? rimuoviLike() : mettiLike(p.id)" (click)="increment()">
+      <i class="fas fa-thumbs-up text-info">  {{count}}</i>
+    </button>
+  </div>
+  <div class="card-footer text-muted" id="footer{{p.id}} ">
+   <form #comment="ngForm" (ngSubmit)="sendComment(comment , p)" (click)="increment()" class="d-flex">
+   <mdb-form-control class="container-fluid">
+     <textarea mdbInput class="form-control" id="comment" require name="comment" #comment="ngModel" ngModel aria-label="Commenta il post"></textarea>
+   </mdb-form-control>
+   <button type="submit" class="btn btn-outline-info text-info mx-2"> + </button>
+  </form>
+   <hr>
+
+   <div class="card" *ngFor="let c of p.commenti">
+    <h5 class="card-header"><img src="{{c.userAvatar}}" style="width:20px"> {{c.userName}} {{c.userSurname}} </h5>
+    <div class="card-body">
+      <p class="card-text">{{c.comment}}</p>
+    </div>
+  </div>
+   <!-- <p class="commenti" *ngFor="let c of p.commenti">
+   <span class=cUser><img src="{{c.userAvatar}}" style="width:20px"> {{c.userName}} {{c.userSurname}} </span>
+   <span class="commento"> {{c.comment}}</span>
+  </p> -->
+
+  </div>
+</div>

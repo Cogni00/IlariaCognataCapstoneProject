@@ -1,0 +1,141 @@
+<app-navbar></app-navbar>
+<div class="background py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12  col-md-8 col-lg-8 " >
+        <div class="card resize mb-2">
+          <div class="padre d-md-flex justify-content-around">
+            <div class="sinistra d-flex flex-column align-items-center d-md-block">
+              <h1 class="text-info mb-1 p-3 text-center">{{nome | titlecase}} {{cognome | titlecase}}</h1>
+              <img src="{{avatar}}" style="width: 200px;" alt="">
+              <div class="card-body">
+
+                <h5 class="card-title">{{impiego | titlecase}}</h5>
+                <p class="card-text">{{citta | titlecase}}</p>
+              </div>
+            </div>
+            <!-- REACTIVE FORM DA COMPLETARE, GUARDA REACTIVE REGISTER-->
+            <div class="destra d-flex flex-column align-items-center d-md-block p-4">
+              <h4 class="text-center mb-4">Le mie competenze</h4>
+              <div *ngFor="let skill of selectedSkills">
+                <ul>
+                  <li class="text-start">{{skill}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="impiego col-md-12 col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title p-3">Ultime Proposte di Lavoro per te</h5>
+            <div class=" d-flex"></div>
+
+            <div *ngIf="impiego=='Fullstack Developer'">
+              <div class="d-flex my-lg-3">
+                <div>
+                  <img class="me-2 p-lg-3" src="../../../assets/company-logo/Amazon_icon.svg.png" style="width:60px;">
+                </div>
+                <div>
+                  <p>C'è una nuova posizione aperta il linea con il tuo profilo! Canditati ora!</p>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="impiego=='Fullstack Developer'">
+              <div class="d-flex my-lg-3">
+                <div>
+                  <img class="me-2" src="../../../assets/company-logo/113-1132546_ernst-young-hd-png-download.png"
+                    style="width:60px;">
+                </div>
+                <div>
+                  <p>C'è una nuova posizione aperta il linea con il tuo profilo! Canditati ora!</p>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="impiego=='Fullstack Developer'">
+              <div class="d-flex my-lg-3">
+                <div>
+                  <img class="me-2" src="../../../assets/company-logo/Accenture-Logo-2001.png" style="width:60px;">
+                </div>
+                <div>
+                  <p>C'è una nuova posizione aperta il linea con il tuo profilo! Canditati ora!</p>
+                </div>
+              </div>
+            </div>
+
+            <div *ngIf="impiego=='Backend Developer'">
+              <div class="d-flex my-lg-3">
+                <div>
+                  <img class="me-2"
+                    src="../../../assets/company-logo/png-transparent-google-logo-google-search-meng-meng-company-text-logo-thumbnail.png"
+                    style="width:60px;">
+                </div>
+                <div>
+                  <p>C'è una nuova posizione aperta il linea con il tuo profilo! Canditati ora!</p>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="impiego=='Backend Developer'">
+              <div class="d-flex my-lg-3">
+                <div>
+                  <img class="me-2" src="../../../assets/company-logo/PwC-PricewaterhouseCoopers-Symbol.png"
+                    style="width:60px;">
+                </div>
+                <div>
+                  <p>C'è una nuova posizione aperta il linea con il tuo profilo! Canditati ora!</p>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="impiego=='Backend Developer'">
+              <div class="d-flex my-lg-3">
+                <div>
+                  <img class="me-2" src="../../../assets/company-logo/Deloitte-logo.png" style="width:60px;">
+                </div>
+                <div>
+                  <p>C'è una nuova posizione aperta il linea con il tuo profilo! Canditati ora!</p>
+                </div>
+              </div>
+            </div>
+
+            <div *ngIf="impiego=='Frontend Developer'">
+              <div class="d-flex my-lg-3">
+                <div>
+                  <img class="me-2" src="../../../assets/company-logo/Capgemini-Logo.png" style="width:60px;">
+                </div>
+                <div>
+                  <p>C'è una nuova posizione aperta il linea con il tuo profilo! Canditati ora!</p>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="impiego=='Frontend Developer'">
+              <div class="d-flex my-lg-3">
+                <div>
+                  <img class="me-2" src="../../../assets/company-logo/NTT_Data-Logo.wine.png" style="width:60px;">
+                </div>
+                <div>
+                  <p>C'è una nuova posizione aperta il linea con il tuo profilo! Canditati ora!</p>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="impiego=='Frontend Developer'">
+              <div class="d-flex my-lg-3">
+                <div>
+                  <img class="me-2" src="../../../assets/company-logo/logo-Meta.png" style="width:60px;">
+                </div>
+                <div>
+                  <p>C'è una nuova posizione aperta il linea con il tuo profilo! Canditati ora!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+        <div class="card-body" *ngFor="let p of posts">
+          <h5 class="card-title" *ngIf="" err>{{err}}></h5>
+          <app-card-post [p]="p"></app-card-post>
+        </div>
+      </div>
+
+  </div>
+</div>

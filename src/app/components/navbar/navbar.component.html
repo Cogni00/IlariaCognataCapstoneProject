@@ -1,0 +1,80 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <img class="plane me-5" src="../../../assets/logo/Aggiungi corpo del testo.png" width="180px;">
+    <button class="navbar-toggler" type="button" (click)="rightAligned.toggle()" aria-controls="navbarRightAlignExample"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars text-info"></i>
+    </button>
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse py-3" id="navbarRightAlignExample" mdbCollapse #rightAligned="mdbCollapse">
+      <!--SEARCHBAR-->
+      <div class="container-fluid">
+        <form class="d-flex input-group w-auto" (ngSubmit)="submit(form)" #form="ngForm">
+          <input type="search" class="form-control rounded" ngModel name="nomeUser"
+           #nomeUser="ngModel" placeholder="Search" aria-label="Search"/>
+          <span class="input-group-text border-0" id="search-addon">
+            <button class="btn lente" type="submit"> <i class="lente fas fa-search text-info"></i></button>
+          </span>
+
+        </form>
+ <!--  <app-search [persona]="utente"></app-search> -->
+      </div>
+      <!-- Left links -->
+      <ul class="navbar-nav ms-auto mb-1 mb-lg-0 d-flex align-items-start">
+       <!--  <li class="nav-item">
+          <a class="nav-link text-info" [routerLink]="['/search']">
+            <div class="d-flex flex-lg-column align-items-lg-center px-2">
+              <i class="fas fa-search"></i>
+              <p class="ps-2 ps-lg-0 blu">Cerca</p>
+            </div>
+          </a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link active text-info" aria-current="page" [routerLink]="['/home']">
+            <div class="d-flex flex-lg-column align-items-lg-center px-2">
+              <i class="fas fa-home"></i>
+              <p class="ps-2 ps-lg-0 blu">Home</p>
+            </div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-info" [routerLink]="['/profile']">
+            <div class="d-flex flex-lg-column align-items-lg-center px-2">
+              <i class="fas fa-user"></i>
+              <p class="ps-2 ps-lg-0 blu">Profilo</p>
+            </div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-info" [routerLink]="['/']">
+            <div class="d-flex flex-lg-column align-items-lg-center px-2">
+              <i class="fas fa-bell">
+                <span class="badge bg-danger ms-2" *ngIf="notificationNumberCount > 0">
+                  {{notificationNumberCount}}</span>
+              </i>
+              <p class="ps-2 ps-lg-0 blu">Notifiche</p>
+            </div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-info" [routerLink]="['/chat']">
+            <div class="d-flex flex-lg-column align-items-lg-center px-2">
+              <i class="fas fa-comments"></i>
+              <p class="ps-2 ps-lg-0 blu">Chat</p>
+            </div>
+          </a>
+        </li>
+        <li class="nav-item pt-2">
+          <button class="btn btn-outline-info px-3 mx-2 blu" (click)="esci()">
+            Logout
+          </button>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>

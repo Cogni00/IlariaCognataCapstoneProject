@@ -1,0 +1,42 @@
+.navbar-expand-lg {
+  background-color: #000080!important;
+}
+
+.background {
+   background-color:#85B9DC ;
+   width:100%;
+}
+
+i, a, .blu{
+  color: #85B9DC!important;
+}
+
+.btn-outline-info {
+  border: 1px solid #85B9DC!important;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+p{
+  font-size: 16px;
+}
+
+
+.plane {
+  padding-left:10px;
+}
+@media screen and ( min-width:450px) and (max-width:768px) {
+ .padre {
+  display:flex;
+ }
+ h4 {
+  text-align: center;
+ }
+ .skills {
+  margin-right: 10px;
+ }
+
+ }
+
+
+
