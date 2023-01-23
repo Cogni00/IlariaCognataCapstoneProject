@@ -1,17 +1,89 @@
 #sfondo {
   background-color:  #85B9DC;
-  height:100vh;
+  padding-bottom: 200px!important;
+  padding:50px;
 }
 
-.fondo2 {
-  position: absolute;
-  bottom:15px;
-  right:50px;
+.row {
+  width:100%;
+}
+.sotto{
+  padding-left:70px;
+}
+.title {
+  color: #85B9DC ;
+  background: rgba(133, 185, 220, 0.1);
+  border: 1px solid  #85B9DC;
 }
 
-.fa-circle {
-  color:rgb(13, 229, 13);
-  padding-right: 5px;
+.fondo2{
+border: 1px solid  #85B9DC;
+padding:0;
 }
+
+a{
+  color: #85B9DC ;
+ }
+
+@media screen and (min-width:992px) and ( max-width:1199px) {
+.fondo2{
+  width:243px;
+ }
+ .sotto{
+  width:600px;
+  padding-left:50px;
+}
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+  #sfondo {
+    background-color:  #85B9DC;
+  }
+  .fondo2{
+    width:243px;
+   }
+  .sotto{
+    width:400px;
+    padding-left:30px;
+  }
+}
+
+@media screen and (min-width:481px) and (max-width:767px) {
+   #sfondo{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+   }
+   .fondo2{
+    width:400px;
+    margin-left:45px;
+   }
+   .sotto{
+    width:400px;
+    margin-left:45px;
+    margin-top: 30px;
+    padding:0;
+  }
+  }
+
+ @media screen and (min-width:320px) and (max-width:480px) {
+      #sfondo{
+        display: flex;
+        flex-direction: column;
+       }
+
+      .fondo2{
+        width:300px;
+        margin-left:0px;
+       }
+
+       .sotto{
+       width:300px;
+        margin-left:0px;
+        margin-top:30px;
+        padding:0px;
+      }
+    }
+
 
 

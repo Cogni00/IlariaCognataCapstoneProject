@@ -2,34 +2,35 @@
 <div class="background py-5">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12  col-md-8 col-lg-8 " >
-        <div class="card resize mb-2">
+      <div class="col-sm-12 col-md-12 col-lg-7 card-avatar" >
+        <div class="card ms-lg-3">
           <div class="padre d-md-flex justify-content-around">
-            <div class="sinistra d-flex flex-column align-items-center d-md-block">
-              <h1 class="text-info mb-1 p-3 text-center">{{nome | titlecase}} {{cognome | titlecase}}</h1>
-              <img src="{{avatar}}" style="width: 200px;" alt="">
+            <div class="d-flex flex-column align-items-center d-md-block">
+              <h1 class="text mb-1 p-3 text-center">{{nome | titlecase}} {{cognome | titlecase}}</h1>
+              <img class="avatar img-fluid" src="{{avatar}}" style="width:200px;" alt="">
               <div class="card-body">
 
-                <h5 class="card-title">{{impiego | titlecase}}</h5>
-                <p class="card-text">{{citta | titlecase}}</p>
+                <h5 class="card-title text-center">{{impiego | titlecase}}</h5>
+                <p class="card-text text-center">{{citta | titlecase}}</p>
               </div>
             </div>
             <!-- REACTIVE FORM DA COMPLETARE, GUARDA REACTIVE REGISTER-->
-            <div class="destra d-flex flex-column align-items-center d-md-block p-4">
-              <h4 class="text-center mb-4">Le mie competenze</h4>
-              <div *ngFor="let skill of selectedSkills">
+            <div class="d-flex flex-column d-md-block p-4 ">
+              <h4 class="text-center info mb-4">Le mie competenze</h4>
+              <div *ngFor="let skill of selectedSkills" class="flex-row">
                 <ul>
                   <li class="text-start">{{skill}}</li>
                 </ul>
               </div>
+
             </div>
           </div>
         </div>
       </div>
-      <div class="impiego col-md-12 col-lg-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title p-3">Ultime Proposte di Lavoro per te</h5>
+      <div class="impiego col-md-12 col-lg-5">
+        <div class="card pb-3 me-lg-2">
+          <div class="card-body lavoro">
+            <h4 class="card-title info">Ultime Proposte di Lavoro per te</h4>
             <div class=" d-flex"></div>
 
             <div *ngIf="impiego=='Fullstack Developer'">
@@ -131,7 +132,7 @@
           </div>
         </div>
     </div>
-        <div class="card-body" *ngFor="let p of posts">
+        <div class="card-body" id="post" *ngFor="let p of posts">
           <h5 class="card-title" *ngIf="" err>{{err}}></h5>
           <app-card-post [p]="p"></app-card-post>
         </div>

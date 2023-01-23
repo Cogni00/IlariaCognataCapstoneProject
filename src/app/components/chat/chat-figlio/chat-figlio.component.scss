@@ -1,14 +1,70 @@
-.fondo1 {
-  position: absolute;
-  bottom:15px;
-  left:20px;
+ .container-fluid{
+    width:800px;
+    height:491px;
+    background-color: white;
+}
+
+.box-chat {
+  overflow: auto;
+  height: 350px;
 }
 
 .btn-outline-info{
-  background-color: #000080!important;;
+  background: rgba(133, 185, 220, 0.2);
+  color: #85B9DC ;
+  border: 2px solid  #85B9DC;
   }
 
+  .input-message{
+    margin-right:5px;
+    width: 90%;
+    background: rgba(133, 185, 220, 0.2);
+  }
+
+  @media screen and (min-width:992px) and ( max-width:1999px){
+    .container-fluid{
+     width:600px;
+    }
+   }
+
+   @media screen and (min-width:768px) and (max-width:991px) {
+    .container-fluid{
+    width:400px;
+    }
+  }
+
+  @media screen and (min-width:481px) and (max-width:767px) {
+    .container-fluid{
+      width:400px;
+    }
+  }
+
+  @media screen and (min-width:320px) and (max-width:480px) {
+    .container-fluid {
+    width:280px;
+    }
+
+    .box-chat {
+      padding:0px;
+     }
+
+     .form{
+      display:flex;
+      flex-direction: row;
+     }
+
+     .card-header{
+      padding:0;
+      padding-top:5px;
+     }
+  }
+
+/*
 .card-title{
   padding-left: 2.25rem;
 }
+
+*/
+
+
 

@@ -1,31 +1,35 @@
-<div class="col-md-8 col-lg-8 card text-center fondo1">
-  <div class="card-header">
-     <h5 class="card-title text-start px-1 py-1">
-    <img src="{{riceventeAvatar}}" style="width:25px;">
-    {{ricevente}}</h5>
-  </div>
-  <div class="modello text-start px-4 py-1" *ngFor="let m of chat">
-    <div class="ricevente">
-    <b class="pe-1">
-      {{m.senderName}}: </b>
-   </div>
-  <div class="testo">
-   {{m.text}}
-   <hr class="hr" />
-  </div>
-  </div>
-  <form  #form="ngForm" (ngSubmit)="inviaMess(form)">
-  <div class="card-body d-flex justify-content-between align-item-center">
-    <div class="figlio container-fluid">
-      <mdb-form-control>
-        <input mdbInput type="text" id="messaggio" class="form-control"  name="messaggio" ngModel/>
-        <label mdbLabel class="form-label text-dark" for="messaggio">Scrivi il tuo messaggio</label>
-      </mdb-form-control>
+<div class="fondo1">
+  <div class="container-fluid">
+    <div class="card-header">
+      <h5 class="card-title text-start px-1 py-1">
+        <img src="{{riceventeAvatar}}" style="width:25px;">
+        {{ricevente}}
+      </h5>
     </div>
-    <div class="figlio">
-      <button type="submit" class="btn btn-outline-info">Invia!</button>
+    <div class="card-body box-chat">
+      <div class="modello text-start px-4" *ngFor="let m of chat">
+        <div class="ricevente">
+          <b class="pe-1">
+            {{m.senderName}}: </b>
+        </div>
+        <div class="testo">
+          {{m.text}}
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-muted">
+      <form #form="ngForm" (ngSubmit)="inviaMess(form)" >
+        <div class="container form d-flex justify-content-between align-items-center">
+          <mdb-form-control class="input-message">
+            <input mdbInput type="text" id="messaggio" class="form-control" name="messaggio" ngModel />
+            <label mdbLabel class="form-label text-dark" for="messaggio">Scrivi il tuo messaggio</label>
+          </mdb-form-control>
+          <div>
+            <button type="submit" class="btn btn-outline-info">Invia!</button>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
-</form>
-  <div class="card-footer text-muted"></div>
 </div>

@@ -1,15 +1,17 @@
 <app-navbar></app-navbar>
 <div class="container-fluid" id="sfondo">
- <router-outlet></router-outlet>
-
-</div>
-<div class="col-md-3 col-lg-3 card text-center fondo2">
-  <div class="card-header text-start">Con chi vuoi chattare?</div>
-  <div class="card-body">
-    <p class="card-text text-start" *ngFor="let u of users">
-      <img src="{{u.avatar}}" style="width:35px;"> <a [routerLink]="['/chat/chat-figlio/'+u.id]">{{u.nome}}
-        {{u.cognome}}</a>
-      <!--   <app-chat-figlio (mandaNotificheChat)="onRiceviNotifiche($event)"></app-chat-figlio> -->
-    </p>
+  <div class="row gx-6">
+    <div class="col-md-3 col-lg-3 card text-center fondo2">
+      <div class="card-header text-start title">Con chi vuoi chattare?</div>
+      <div class="card-body ciclo-utenti">
+        <p class="card-text text-start" *ngFor="let u of users">
+          <img src="{{u.avatar}}" style="width:35px;"> <a [routerLink]="['/chat/chat-figlio/'+u.id]">{{u.nome}}
+            {{u.cognome}}</a>
+        </p>
+      </div>
+    </div>
+    <div class="sotto col-sm-12 col-md-9 col-lg-9">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>

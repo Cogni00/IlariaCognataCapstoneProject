@@ -1,16 +1,19 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { PostService } from '../post/post.service';
 import { User } from 'src/app/auth/auth-response';
+import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent implements OnInit {
+[x: string]: any;
 
   users: User[] =[]
   messaggi:any
   id:number;
+  buttonCollapse: any;
   constructor(private postSrv:PostService) { }
 
   ngOnInit(): void {

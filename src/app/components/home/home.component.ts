@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
-import { Post } from '../post/post';
+import { Articles, News, Post, Data } from '../post/post';
 import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
 import { PostComponent } from '../post/post.component';
 import { PostService } from '../post/post.service';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/auth/auth-response';
+
+
 
 
 @Component({
@@ -24,21 +26,20 @@ export class HomeComponent implements OnInit {
   citta!: string;
   avatar!: string;
 
-  notificationNumberCount:number;
+
   content!: any;
   form: NgForm
 
   utente : User[] = []
   nomeUtente: string;
 
-
-   /*
-   Frontend: y.user.impiego == 'Frontend Developer';
-    Backend: y.user.impiego === 'Backend Developer'
-     Fullstack: y.user.impiego === 'Fullstack Developer'
-  */
-
-
+  /* articles!: Articles[]; */
+  data!: Data[];
+  title: string
+  url: string
+  image: string
+  description:string
+  published_at: string
 
   constructor(private authSrv: AuthService, private modalService: MdbModalService, private postSrv:PostService, private router:Router) {
   }
@@ -46,7 +47,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.prendiPost();
     this.prendiInfoPersonali();
-   // this.increment();
+    /* this.prendiNews(); */
 
   }
 
@@ -72,13 +73,21 @@ export class HomeComponent implements OnInit {
     })
   }
 
+/*  prendiNews() {
+    this.postSrv.getNews().subscribe((res) => {
+      console.log(res.data)
+      this.data = res.data
+      this.data.forEach(el => {
+        console.log(el);
+        })
+      })
+ } */
+
+
   esci() {
     this.authSrv.esci()
   }
 
- /*  increment() {
-    this.notificationNumberCount++
-  } */
   }
 
 

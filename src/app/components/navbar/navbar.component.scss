@@ -4,11 +4,27 @@
 
  i, a, .blu{
    color: #85B9DC;
+
+
  }
 
  .lente {
-   color:#85B9DC!important;
+   color:  #000080!important;
+   background-color: #85B9DC;
+   opacity: 0.9;
    font-size: 16px;
  }
 
+.badge-notificationOn {
+  visibility: visible;
+}
+
+.badge-notificationOff {
+  display: none;
+}
+
+#blu {
+  border: 2px solid #85B9DC;
+  color: #85B9DC;
+}
 

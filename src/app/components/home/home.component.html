@@ -1,12 +1,12 @@
 <div class="sfondo">
   <app-navbar></app-navbar>
   <div class="feed py-5">
-    <div class="container d-flex justify-content-center">
-      <div class="row">
-        <div class="col-md-3 col-lg-2">
+    <div class="container ">
+      <div class="row papa">
+        <div class="col-sm-12 col-md-3 col-lg-2 figlio">
           <div class="card resize">
             <div>
-              <img src="{{avatar}}" class="card-img-top img-fluid align-items-center w-sm-25" alt="" />
+              <img src="{{avatar}}" class="card-img-top align-items-center w-sm-25" alt="" />
             </div>
             <div class="card-body">
               <h5 class="card-title text-center">{{nome | titlecase}} {{cognome | titlecase}}</h5>
@@ -142,11 +142,21 @@
               <a href="#" class="card-link"></a>
             </div>
           </div>
+          <div class="card mt-3">
+            <div class="card-body">
+              <h5>Ultime Notizie</h5>
+              <div *ngFor="let d of data" class="my-4">
+              <h6 class="card-title">{{d.title}}</h6>
+              <p class="card-text" id="text">{{d.description}}</p>
+             </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- Rigo 110, invece che la card, questo
+  </div>
+</div>
+<!-- Rigo 110, invece che la card, questo
   <div class="example-card" *ngFor="let p of posts">
         <app-post [p]="p"></app-post>
 

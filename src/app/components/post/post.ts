@@ -28,18 +28,6 @@ export interface GetSkills {
   id: number,
   userId:number,
   selectedsSkills: string[]
-/*   html_5: string,
-  css:string,
-  bootstrap:string,
-  javascript:string,
-  nodejs:string,
-  typescript:string,
-  angular:string,
-  react:string,
-  java:string,
-  php:string,
-  cplusplus:string,
-  mysql:string */
 }
 
 export interface Skills {
@@ -53,7 +41,76 @@ export interface Messaggi {
   recieverId:number,
   receiverName:string,
   id:number
-
 }
 
+
+export interface News {
+   articles: [
+    {
+      source: {
+        id: null,
+        name: string,
+      },
+      author: string,
+      title: string,
+      description: string,
+      url: string,
+      urlToImage: string,
+      publishedAt: string,
+      content: string,
+    }
+   ]
+
+    }
+
+    export interface Articles {
+      author: string,
+      title: string,
+      description: string,
+      url: string,
+      urlToImage: string,
+      publishedAt: string,
+      content: string
+    }
+
+
+    export interface Notizie {
+      data: [
+        {
+          uuid: string,
+          title: string,
+          description: string,
+          keywords: string,
+          snippet: string,
+          url: string,
+          image_url: string,
+          language: string,
+          published_at: string,
+          source: string,
+          categories: [
+            string,
+          ],
+          relevance_score: null
+        }
+      ]
+    }
+
+    export interface Data
+
+    {
+      uuid: string,
+      title: string,
+      description: string,
+      keywords: string,
+      snippet: string,
+      url: string,
+      image_url: string,
+      language: string,
+      published_at: string,
+      source: string,
+      categories: [
+        string,
+      ],
+      relevance_score: null
+    }
 

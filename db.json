@@ -37,7 +37,7 @@
         " Angular",
         " Java"
       ],
-      "recezioneMess": false,
+      "recezioneMess": true,
       "id": 7
     },
     {
@@ -131,6 +131,69 @@
       ],
       "recezioneMess": false,
       "id": 12
+    },
+    {
+      "email": "davide@alfonsi.com",
+      "password": "$2a$10$9aIsZC0UUYp2wJZazgIBv..YSrtYcL./faKrsHwB4IWlplGl4pUiW",
+      "nome": "Davide",
+      "cognome": "Alfonsi",
+      "impiego": "Fullstack Developer",
+      "citta": "roma",
+      "avatar": "../../../assets/avatar/avatar8.svg",
+      "selectedSkills": [
+        " Html5",
+        " CSS",
+        " Bootstrap",
+        " Javascript",
+        " Nodejs",
+        " Typescript",
+        " Angular",
+        " Java",
+        " Php",
+        " MySQL"
+      ],
+      "recezioneMess": false,
+      "id": 13
+    },
+    {
+      "email": "stefano@proietti.com",
+      "password": "$2a$10$YbbcU1XdZvyp8Ezg30SmWOWK1DAKCFedicPZ.vmw/nkkvgNQDDLcC",
+      "nome": "Stefano",
+      "cognome": "Proietti",
+      "impiego": "Frontend Developer",
+      "citta": "roma",
+      "avatar": "../../../assets/avatar/avatar3.svg",
+      "selectedSkills": [
+        " Html5",
+        " CSS",
+        " Bootstrap",
+        " Javascript",
+        " Nodejs",
+        " Typescript",
+        " Angular",
+        " React"
+      ],
+      "recezioneMess": false,
+      "id": 14
+    },
+    {
+      "email": "giulia@cappelli.com",
+      "password": "$2a$10$aGZ7xtIgdbh.NLM3Rv4uDeKdB784op2zd6rnYslYBU8pMEs.fYxFy",
+      "nome": "Giulia",
+      "cognome": "Cappelli",
+      "impiego": "Frontend Developer",
+      "citta": "roma",
+      "avatar": "../../../assets/avatar/avatar3.svg",
+      "selectedSkills": [
+        " Html5",
+        " CSS",
+        " Bootstrap",
+        " Javascript",
+        " Typescript",
+        " Angular"
+      ],
+      "recezioneMess": false,
+      "id": 15
     }
   ],
   "avatars": [

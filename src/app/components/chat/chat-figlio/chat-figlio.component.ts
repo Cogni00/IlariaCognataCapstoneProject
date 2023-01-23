@@ -57,11 +57,10 @@ export class ChatFiglioComponent implements OnInit {
   form.reset()
   window.location.reload()
  })
-/*  this.postSrv.modificaBoolean(this.id).subscribe(res => {
-  console.log(res)
- })
- */
-}
+ this.postSrv.modificaBoolean(this.id, true)
+ }
+
+
 
 riceviMessaggio() {
   let user = localStorage.getItem('user')
@@ -83,8 +82,4 @@ riceviMessaggio() {
 
   })
 }
- mandaNotifica(){
-  this.mandaNotificheChat.emit(this.chat)
- }
-
 }

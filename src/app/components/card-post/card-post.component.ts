@@ -53,7 +53,7 @@ export class CardPostComponent implements OnInit {
     this.getFavorites()
     this.getCommentAvatar()
     this.getPostFav()
-    this.increment()
+    /* this.increment() */
   }
 
 
@@ -95,7 +95,6 @@ export class CardPostComponent implements OnInit {
       this.isFav = true
       this.getFavorites()
     })
-    //this.notificationNumberCount++
   }
 
   rimuoviLike() {
@@ -138,6 +137,9 @@ export class CardPostComponent implements OnInit {
     form.reset()
   }
 
+
+
+
   getCommentAvatar() {
     this.postSrv.prendiNome(this.loggedId).subscribe((res) => {
       if (res.avatar) {
@@ -156,7 +158,5 @@ export class CardPostComponent implements OnInit {
   })
  }
 
-  increment() {
-  this.postSrv.aumentaNotifiche();
- }
+
 }

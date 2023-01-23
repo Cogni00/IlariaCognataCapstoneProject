@@ -19,12 +19,14 @@ export class LoginComponent implements OnInit {
   constructor(private authSrv: AuthService, private router: Router) { }
 
   ngOnInit(): void {
+    // se il boolean di lorenzo è true, ng style con badge rosso
   }
 
   login (l: NgForm) {
     let data: LoginRequest = {
       email: l.value.email,
       password: l.value.password
+      //devo dire alla navbar che quando l'utente loggato ha true come valore di recezioneMess, fa apparire pallino rosso( vedi visible e hidden)
     }
     this.authSrv.accedi(data).pipe(catchError(err => {
       if (err.error == "Cannot find user") {
