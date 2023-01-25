@@ -51,6 +51,7 @@ export class ChatFiglioComponent implements OnInit {
   text: form.value.messaggio,
   receiverId: this.id,
   receiverName: this.riceventeNome,
+  pending:true
  }
  this.postSrv.sendMessage(data).subscribe(res => {
   console.log(res)
@@ -61,11 +62,10 @@ export class ChatFiglioComponent implements OnInit {
  }
 
 
-
 riceviMessaggio() {
   let user = localStorage.getItem('user')
   let utente = JSON.parse(user)
-  this.postSrv.recieveMessagge(utente.user.id, this.id).subscribe(res => {
+  this.postSrv.recieveMessagge().subscribe(res => {
     console.log(res);
     this.messaggi = res;
     this.chat=[]

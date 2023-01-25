@@ -8,6 +8,7 @@ export interface Post {
 }
 
 export interface GetPost {
+  id:number,
   user_id: number,
   testo: string,
   commenti: object[],
@@ -40,7 +41,8 @@ export interface Messaggi {
   text:string,
   recieverId:number,
   receiverName:string,
-  id:number
+  id:number,
+  pending: boolean
 }
 
 

@@ -28,11 +28,12 @@ import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { PostComponent } from './components/post/post.component';
 import { CardPostComponent } from './components/card-post/card-post.component';
-import { SearchPipe } from './components/home/search.pipe';
 import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { ChatFiglioComponent } from './components/chat/chat-figlio/chat-figlio.component';
+import { ModifyPostComponent } from './components/card-post/modify-post/modify-post.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -43,11 +44,12 @@ import { ChatFiglioComponent } from './components/chat/chat-figlio/chat-figlio.c
     ProfileComponent,
     PostComponent,
     CardPostComponent,
-    SearchPipe,
     SearchComponent,
     NavbarComponent,
     ChatComponent,
     ChatFiglioComponent,
+    ModifyPostComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

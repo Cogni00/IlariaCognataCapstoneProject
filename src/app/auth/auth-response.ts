@@ -18,7 +18,8 @@ export interface User {
   impiego: string,
   avatar: string,
   selectedSkills: string[],
-  recezioneMess: boolean
+  recezioneMess: boolean,
+  pending: boolean
 }
 
 export interface RegisterRequest {

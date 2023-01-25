@@ -2,6 +2,10 @@
   <div class="card-header">
     <img src="{{avatar}}" style=" width: 50px;" class="card-img-top img-fluid" alt="" />
     <b>{{nome}} {{cognome}}</b>
+    <span *ngIf="id == loggedId">
+      <button  class="btn btn-outline-info right" (click)="modifica(p)"><i class="far fa-edit"></i></button>
+      <button  class="btn btn-outline-info right" (click)="elimina(p.id)"><i class="far fa-trash-alt"></i></button>
+    </span>
   </div>
   <div class="card-body">
     <h5 class="card-title"></h5>
@@ -28,3 +32,4 @@
     </div>
   </div>
 </div>
+

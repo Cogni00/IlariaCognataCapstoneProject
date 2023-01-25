@@ -2,6 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { PostService } from '../post/post.service';
 import { User } from 'src/app/auth/auth-response';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
+import { Messaggi } from '../post/post';
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
@@ -14,11 +15,12 @@ export class ChatComponent implements OnInit {
   messaggi:any
   id:number;
   buttonCollapse: any;
+  chat: any
+
   constructor(private postSrv:PostService) { }
 
   ngOnInit(): void {
     this.getChatUser();
-
   }
 
   getChatUser() {
@@ -34,18 +36,37 @@ export class ChatComponent implements OnInit {
         this.users=utenti
       }
     }
+    this.getAllChat();
   })
-  }
-  onRiceviNotifiche(value: string[]){
-    console.log(value)
   }
 
-/*   notificaMessaggi(){
-    let user = localStorage.getItem('user')
-    let utente = JSON.parse(user)
-    this.postSrv.recieveMessagge(utente.user.id, this.id).subscribe(res => {
-      this.messaggi = res;
-      console.log(res)
-  })
-} */
+  getAllChat() {
+    this.postSrv.recieveMessagge().subscribe((res => {
+      console.log(res);
+      this.chat = res
+      this.chat.forEach(msg => {
+        this.users.forEach(user =>{
+          if(user.id == msg.senderId){
+            if(msg.pending == true) {
+              console.log("funziono")
+              user.pending = true
+            }
+          }
+        })
+      });
+    }))
+  }
+
+  clearPending(id:number) {
+    this.chat.forEach(msg => {
+      if(msg.senderId == id) {
+        msg.pending = false
+        this.postSrv.aggiornaMsg(msg).subscribe(res =>{
+          console.log("pendingInviato");
+          this.getChatUser()
+        })
+      }
+    })
+  }
+
 }

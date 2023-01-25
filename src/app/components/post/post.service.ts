@@ -1,7 +1,7 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { GetPost, Post, Like, GetSkills, News, Notizie } from './post';
-import { catchError, tap } from 'rxjs';
+import { catchError, merge, mergeScan, tap } from 'rxjs';
 import { User } from 'src/app/auth/auth-response';
 import { Messaggi } from './post';
 import { Router } from '@angular/router';
@@ -48,7 +48,7 @@ constructor(private http: HttpClient, private router:Router) { }
   }
 
   prendiUtentiChat( ) {
-    return this.http.get<User[]>('http://localhost:4201/users/').pipe(catchError(err => {
+    return this.http.get<User[]>('http://localhost:4201/users').pipe(catchError(err => {
       console.log(err);
       throw err
     }))
@@ -81,7 +81,25 @@ constructor(private http: HttpClient, private router:Router) { }
   }
 
   deleteLike(id: number) {
-    return this.http.delete(this.likeUrl+`/ ${id}`)
+    return this.http.delete(this.likeUrl+`/${id}`)
+  }
+
+  eliminaPost(id: number) {
+    return this.http.delete(this.postUrl+`/${id}`)
+  }
+
+  postComment(data: GetPost, id: number) {
+    return this.http.put<GetPost>(this.postUrl +`/${id}`, data).pipe(catchError(err => {
+      console.log(err);
+      throw err
+    }))
+  }
+
+  modificaPost(data: GetPost, id: number) {
+    return this.http.put<GetPost>(this.postUrl+`/${id}`, data).pipe(catchError(err => {
+      console.log(err);
+      throw err
+    }))
   }
 
   getFav() {
@@ -90,13 +108,6 @@ constructor(private http: HttpClient, private router:Router) { }
     let uId = user.user.id
 
     return this.http.get<Like[]>(this.likeUrl +`?userId=${uId}`).pipe(catchError(err => {
-      console.log(err);
-      throw err
-    }))
-  }
-
-  postComment(data: GetPost, id: number) {
-    return this.http.put<GetPost>(this.postUrl +`/${id}`, data).pipe(catchError(err => {
       console.log(err);
       throw err
     }))
@@ -126,7 +137,7 @@ constructor(private http: HttpClient, private router:Router) { }
     }))
   }
 
-  recieveMessagge(senderId: number, receiverId:number) {
+  recieveMessagge() {
     return this.http.get(this.chatUrl).pipe(catchError(err => {
       console.log(err);
       throw err
@@ -141,12 +152,20 @@ constructor(private http: HttpClient, private router:Router) { }
     })
 }
 
+  aggiornaMsg(m: Messaggi) {
+    return this.http.put(this.chatUrl+`/${m.id}`, m).pipe(catchError(err => {
+      console.log(err);
+      throw err;
+    }))
+  }
 /*   getNews() {
     return this.http.get<Notizie>(this.newsApiUrls).pipe(catchError(err => {
       console.log(err);
       throw err
     }))
     } */
+
+
 }
 
 

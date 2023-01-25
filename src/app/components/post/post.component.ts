@@ -13,6 +13,7 @@ import { PostService } from './post.service';
 export class PostComponent implements OnInit {
   user_id!: number;
   newDate!: {}
+  id: number;
   @Input() p!: any
 
   constructor(private postSrv: PostService, private router:Router) { }
@@ -24,12 +25,12 @@ export class PostComponent implements OnInit {
     this.getDate()
     this.getUserId()
     let data: GetPost = {
+      id: this.id,
       user_id: this.user_id,
       testo: form.value.testo,
       commenti: [],
       avatar: form.value.avatar,
       date: this.newDate
-
     }
 
     this.postSrv.creaPost(data).pipe(catchError(err => {

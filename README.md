@@ -1,27 +1,31 @@
 # Capstoneprjct
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
+Questo progetto è stato creato con [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10. e con [MDB](https://mdbootstrap.com/docs/angular/) version 3.0.1 
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Avvia il dev server con `npm run fullstack`. Naviga⛵️ su `http://localhost:4200/`. 
 
-## Code scaffolding
+## Register e Login 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Compila il form di registrazione e poi naviga⛵️ al form di login. i tuoi dati verranno salavati automaticamente in locale.
 
-## Build
+## Navbar 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Ricerca🔎 gli utenti registrati sul social digitando il loro nome nella barra di ricerca e visualizza la preview del loro profilo. Naviga nella home🏠, sul tuo profilo personale 👤, o sulla chat per scrivere ad uno degli altri utenti 💬👥. 
 
-## Running unit tests
+## Home 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Interagisci con la piattaforma👩🏼‍💻! Avvia un post, commenta quello di un altro utente 💬, metti like 👍🏻, modifica il tuo post o eliminalo🗑️. Consulta le ultime offerte di lavoro in linea con il tuo profilo 👩🏼‍💼👨🏽‍💼 e tieniti aggiornato sulle notizie dal mondo 🗞️.
 
-## Running end-to-end tests
+## Profilo 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Visualizza il tuo profilo personale👩🏼🧑🏼‍🦰👨🏽‍🦰👨🏻‍🦱, le tue hard skills, le proposte di lavoro e i post pubblicati.
+
+## Chat
+
+avvia una conversazione 📲 con uno dei tuoi amici cliccando sul suo nome, scrivi un messaggio✍🏻 e invialo! Poi controlla la recezione del messaggio💬 entrando con il suo utente (email:nome@cognome.com, pass:nome) e vedrai le notifiche🔔 sulla navbar e sulla chat della persona da cui hai ricevuto il messaggio!🫂
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Per ulteriori info su Angular CLI usa `ng help` o vai sulla pagina [Angular CLI Overview and Command Reference](https://angular.io/cli).

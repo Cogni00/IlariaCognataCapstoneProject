@@ -1,0 +1,14 @@
+<div class="post-container">
+  <form class="example-form p-4" #form="ngForm" (ngSubmit)="inviaModificato(form)">
+    <div class="card">
+      <div class="card-body p-2 m-2">
+        <h5 class="card-title">Modifica il tuo post!</h5>
+          <mdb-form-control>
+            <textarea mdbInput class="form-control" id="textAreaExample" rows="4" require name="newTesto" #newTesto="ngModel" ngModel id="newTesto" class="form-control" aria-label="Di cosa vorresti parlare?"></textarea>
+          </mdb-form-control>
+      </div>
+      <button type="submit" class="btn btn-info btn-sm m-2">Pubblica</button>
+    </div>
+  </form>
+</div>
+

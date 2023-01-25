@@ -6,6 +6,9 @@ import { ViewChild } from '@angular/core';
 import { GetPost, Post } from '../post/post';
 import { NgForm } from '@angular/forms';
 import { catchError } from 'rxjs';
+import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
+import { ModifyPostComponent } from './modify-post/modify-post.component';
+import { NonNullAssert } from '@angular/compiler';
 
 
 @Component({
@@ -42,10 +45,11 @@ export class CardPostComponent implements OnInit {
 
   @ViewChild('user') user!: AuthResponse
   @ViewChild('form') form!: NgForm
+  modalRef: MdbModalRef<ModifyPostComponent> | null = null;
 
 
 
-  constructor(private postSrv: PostService, private router: Router) { }
+  constructor(private postSrv: PostService, private router: Router, private modalService: MdbModalService) { }
 
   ngOnInit(): void {
     this.getLoggedName()
@@ -53,7 +57,6 @@ export class CardPostComponent implements OnInit {
     this.getFavorites()
     this.getCommentAvatar()
     this.getPostFav()
-    /* this.increment() */
   }
 
 
@@ -107,6 +110,7 @@ export class CardPostComponent implements OnInit {
 
   sendComment(form: NgForm, p: Post) {
     let data: GetPost = {
+      id: p.id,
       testo: p.testo,
       commenti: p.commenti,
       date: p.date,
@@ -133,11 +137,30 @@ export class CardPostComponent implements OnInit {
         throw err
       })
     }
-
     form.reset()
   }
 
 
+  elimina(id: number) {
+    this.postSrv.eliminaPost(id).subscribe(res => {
+      res
+      window.location.reload()
+    })
+
+  }
+
+  modifica(p: Post) {
+    this.modalRef = this.modalService.open(ModifyPostComponent);
+    localStorage.setItem("cambiaPost", JSON.stringify(p));
+     /* data: {
+        id: p.id,
+        testo: p.testo,
+        commenti: p.commenti,
+        date: p.date,
+        user_id: p.user_id,
+        avatar: p.avatar
+      } */
+    }
 
 
   getCommentAvatar() {
@@ -152,7 +175,6 @@ export class CardPostComponent implements OnInit {
 
    getPostFav() {
     this.postSrv.getCountFav(this.p.id).subscribe(res => {
-      console.log(res)
     let temp = res
     this.count = temp.length
   })

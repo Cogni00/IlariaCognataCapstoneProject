@@ -25,6 +25,13 @@ a{
   color: #85B9DC ;
  }
 
+#badge{
+  height:15px !important;
+  width:15px !important;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
 @media screen and (min-width:992px) and ( max-width:1199px) {
 .fondo2{
   width:243px;
@@ -48,7 +55,7 @@ a{
   }
 }
 
-@media screen and (min-width:481px) and (max-width:767px) {
+@media screen and (min-width:480px) and (max-width:767px) {
    #sfondo{
     display: flex;
     flex-direction: column;
@@ -66,7 +73,7 @@ a{
   }
   }
 
- @media screen and (min-width:320px) and (max-width:480px) {
+ @media screen and (min-width:320px) and (max-width:479px) {
       #sfondo{
         display: flex;
         flex-direction: column;

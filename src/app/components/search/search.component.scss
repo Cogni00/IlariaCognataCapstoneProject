@@ -1,13 +1,16 @@
 .container-fluid{
   background-color:  #85B9DC;
-  height:100vh;
+  height:100%;
 }
-
-
 
 h3 {
   color:white;
   padding-left:10px;
+}
+
+ul{
+  background: rgba(133, 185, 220, 0.2);
+  box-shadow: 1px 1px 5px 1px rgb(168, 200, 222);
 }
 
 .lente {
