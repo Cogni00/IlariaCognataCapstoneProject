@@ -24,7 +24,7 @@ Visualizza il tuo profilo personale👩🏼🧑🏼‍🦰👨🏽‍🦰👨�
 
 ## Chat
 
-avvia una conversazione 📲 con uno dei tuoi amici cliccando sul suo nome, scrivi un messaggio✍🏻 e invialo! Poi controlla la ricezione del messaggio💬 entrando con il suo utente (email:nome@cognome.com, pass:nome) e vedrai le notifiche🔔 sulla navbar e sulla chat della persona da cui hai ricevuto il messaggio!🫂
+Avvia una conversazione 📲 con uno dei tuoi amici cliccando sul suo nome, scrivi un messaggio✍🏻 e invialo! L'utente a cui hai mandato il messaggio una volta entrato con le sue credenziali vedrà le notifiche sulla navbar🔔 e sulla propria chat💬
 
 ## Further help
 
