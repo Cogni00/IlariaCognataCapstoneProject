@@ -12,7 +12,7 @@ Compila il form di registrazione e poi naviga⛵️ al form di login. i tuoi dat
 
 ## Navbar 
 
-Ricerca🔎 gli utenti registrati sul social digitando il loro nome nella barra di ricerca e visualizza la preview del loro profilo. Naviga nella home🏠, sul tuo profilo personale 👤, o sulla chat per scrivere ad uno degli altri utenti 💬👥. 
+Ricerca🔎 gli utenti registrati sul social digitando il loro nome nella barra di ricerca visualizzano la preview del loro profilo. Naviga nella home🏠, sul tuo profilo personale 👤, o sulla chat per scrivere ad uno degli altri utenti 💬👥. 
 
 ## Home 
 
@@ -24,7 +24,7 @@ Visualizza il tuo profilo personale👩🏼🧑🏼‍🦰👨🏽‍🦰👨�
 
 ## Chat
 
-avvia una conversazione 📲 con uno dei tuoi amici cliccando sul suo nome, scrivi un messaggio✍🏻 e invialo! Poi controlla la recezione del messaggio💬 entrando con il suo utente (email:nome@cognome.com, pass:nome) e vedrai le notifiche🔔 sulla navbar e sulla chat della persona da cui hai ricevuto il messaggio!🫂
+avvia una conversazione 📲 con uno dei tuoi amici cliccando sul suo nome, scrivi un messaggio✍🏻 e invialo! Poi controlla la ricezione del messaggio💬 entrando con il suo utente (email:nome@cognome.com, pass:nome) e vedrai le notifiche🔔 sulla navbar e sulla chat della persona da cui hai ricevuto il messaggio!🫂
 
 ## Further help
 
