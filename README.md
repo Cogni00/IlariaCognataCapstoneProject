@@ -1,4 +1,4 @@
-# Capstoneprjct
+# Developlane ✈️
 
 Questo progetto è stato creato con [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10. e con [MDB](https://mdbootstrap.com/docs/angular/) version 3.0.1 
 
